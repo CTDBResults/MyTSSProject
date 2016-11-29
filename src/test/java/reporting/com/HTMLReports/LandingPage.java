@@ -31,7 +31,7 @@ public class LandingPage extends DBUtilities {
 		List<List<String>> data = table.raw();
 		System.out.println(" value is ++" +data);
 		for (int i = 1; i <data.size(); i++){
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			String name = data.get(i).get(1);
 			System.out.println(" and the name is+++++" +name);
 			if(name.equals("Current_Bill")
@@ -72,7 +72,7 @@ public class LandingPage extends DBUtilities {
 				}else{
 				System.out.println("Element is Absent");
 				}
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			Assert.assertTrue(" Varification failede as " +myxpath +"NOT FOUND",driver.findElement(By.xpath(myxpath)).isDisplayed());
 
 			}
