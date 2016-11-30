@@ -1,6 +1,5 @@
 Feature: Some feature
 
-  @wip
   Scenario Outline: DTSP-252 : Create generic Login screen
     DTSP-277 : As an end user, I want to be able to view the left navigation panel so that I can quickly access the functions I need (Phase 1)
     DTSP-28 : As an end user, I want to be able to submit a Monthly Payroll Tax Return Form, so that my Payroll Tax Return is lodged
@@ -25,8 +24,8 @@ Feature: Some feature
       # defect | item2 | Monthly Return                                                                              |
       | item2 | Annual Reconciliation                                                                       |
       | item2 | Tax Payer Details                                                                           |
-      | item2 | Client Referenitce Number (CRN)                                                               |
-      | item2 | Australian Business Number (ABN)                                                            |
+      | item2 | Client Reference Number                                                                     |
+      | item2 | Australian Business Number                                                                  |
       | item9 | Payroll Tax Group Number                                                                    |
       | item9 | Year Of Return                                                                              |
       | item9 | Month Of Return                                                                             |
@@ -154,4 +153,24 @@ Feature: Some feature
 
     Examples: 
       | PortalName | UserNameField | PasswordField | UserName | Password  |
+      | TSS        | UserNameInput | PasswordInput | bob      | dbresults |
+
+  @wip
+  Scenario Outline: something
+    Given I want to login to portal "<PortalName>"
+    And I enter then details as
+      | Fields        | Value      |
+      | UserNameInput | <UserName> |
+      | PasswordInput | <Password> |
+    And I hit Enter
+    And I check I am on "HomePage" page
+    And I click on "Payroll Tax"
+    And I click on "ACT Wages Paid or Taxable"
+    And I enter then details as
+      | Fields                | Value                            |
+      | BonusesAndCommissions | 999 |
+      | Allowances | 100 |
+
+    Examples: 
+      | PortalName | UserNameField | PasswordField | UserName | Password  | 
       | TSS        | UserNameInput | PasswordInput | bob      | dbresults |
