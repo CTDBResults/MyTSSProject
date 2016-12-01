@@ -267,7 +267,7 @@ public class DBUtilities extends XPathGenerator {
 					  String myXpath = createXpath.xpathMakerByInputId(data.get(i).get(0));
 					  System.out.println(i);
 					  System.out.println(myXpath);
-				//	  driver.findElement(By.xpath(myXpath)).clear();
+					  driver.findElement(By.xpath(myXpath)).clear();
 					//  driver.findElement(By.xpath(myXpath)).click();
 					 // driver.findElement(By.xpath(myXpath)).sendKeys(Keys.TAB);
 					  Thread.sleep(500);
