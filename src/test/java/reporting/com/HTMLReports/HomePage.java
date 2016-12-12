@@ -19,7 +19,7 @@ public class HomePage extends DBUtilities {
 			//for production
 		//driver.get("https://ssc.dbresults.com.au/CSSPortal");
 		//following is for SIT
-			driver.get("https://dev-ssc.dbresults.com.au/TSSPortal/Login.aspx?OriginalURL=https%3a%2f%2fdev-ssc.dbresults.com.au%2fLodgement%2fLodgePayroll_Step1_Form.aspx");
+			driver.get("https://test-ssc.dbresults.com.au/TSSPortal/Login.aspx?OriginalURL=https%3a%2f%2fdev-ssc.dbresults.com.au%2fLodgement%2fLodgePayroll_Step1_Form.aspx");
 		// for dev
 		//driver.get("https://dev-ssc.dbresults.com.au/CSSPortal/");
         
